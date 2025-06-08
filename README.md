@@ -62,7 +62,7 @@ API desenvolvida do desafio 02 em Node.js com o Fastify e Typescript, afim de se
 
 ### Funcionais
 
-- [ ] Deve ser possível criar um usuário
+- [x] Deve ser possível criar um usuário
 - [ ] Deve ser possível registrar uma refeição feita, com as seguintes informações:
   - Nome
   - Descrição
