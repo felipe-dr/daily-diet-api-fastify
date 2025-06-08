@@ -18,7 +18,9 @@
   "license": "ISC",
   "main": "server.js",
   "scripts": {
-    "dev": "tsx watch src/server.ts"
+    "dev": "tsx watch src/server.ts",
+    "lint": "eslint src --ext .ts --fix",
+    "knex": "tsx ./node_modules/knex/bin/cli.js"
   },
   "devDependencies": {
     "@rocketseat/eslint-config": "^2.2.2",
