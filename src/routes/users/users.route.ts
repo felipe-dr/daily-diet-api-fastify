@@ -14,6 +14,16 @@ export async function usersRoute(app: FastifyInstance) {
 
     const { name, email } = createUserBodySchema.parse(request.body)
 
+    const isUserEmailAlreadyExists = await knex('users')
+      .where('email', email)
+      .first()
+
+    if (isUserEmailAlreadyExists) {
+      return reply
+        .status(400)
+        .send({ message: `User with e-mail '${email}' already exists.` })
+    }
+
     let sessionId = request.cookies.sessionId
 
     if (!sessionId) {
@@ -35,11 +45,15 @@ export async function usersRoute(app: FastifyInstance) {
     return reply.status(201).send()
   })
 
-  app.get('/', { preHandler: [checkSessionIdExists] }, async (request) => {
-    const { sessionId } = request.cookies
+  app.get(
+    '/',
+    { preHandler: [checkSessionIdExists] },
+    async (request, reply) => {
+      const users = await knex('users')
+        .where('session_id', request.user?.session_id)
+        .select()
 
-    const users = await knex('users').where('session_id', sessionId).select()
-
-    return { users }
-  })
+      return reply.send({ users })
+    },
+  )
 }
