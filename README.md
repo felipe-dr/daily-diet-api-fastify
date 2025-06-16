@@ -50,7 +50,6 @@
   <li><a href="#requisitos-e-funcionalidades">Requisitos e funcionalidades</a></li>
   <li><a href="#como-executar">Como executar</a></li>
   <li><a href="#tecnologias">Tecnologias</a></li>
-  <li><a href="#prévia">Prévia</a></li>
   <li><a href="#autor">Autor</a></li>
 </ol>
 
@@ -63,17 +62,17 @@ API desenvolvida do desafio 02 em Node.js com o Fastify e Typescript, afim de se
 ### Funcionais
 
 - [x] Deve ser possível criar um usuário
-- [ ] Deve ser possível registrar uma refeição feita, com as seguintes informações:
+- [x] Deve ser possível registrar uma refeição feita, com as seguintes informações:
   - Nome
   - Descrição
   - Data e Hora
   - Está dentro ou não da dieta
   > *As refeições devem ser relacionadas a um usuário.*
-- [ ] Deve ser possível editar uma refeição, podendo alterar todos os dados acima
-- [ ] Deve ser possível apagar uma refeição
-- [ ] Deve ser possível listar todas as refeições de um usuário
-- [ ] Deve ser possível visualizar uma única refeição
-- [ ] Deve ser possível recuperar as métricas de um usuário
+- [x] Deve ser possível editar uma refeição de um usuário, podendo alterar todos os dados acima
+- [x] Deve ser possível apagar uma refeição de um usuário
+- [x] Deve ser possível listar todas as refeições de um usuário
+- [x] Deve ser possível visualizar uma única refeição de um usuário
+- [x] Deve ser possível recuperar as métricas de um usuário
   - Quantidade total de refeições registradas
   - Quantidade total de refeições dentro da dieta
   - Quantidade total de refeições fora da dieta
@@ -81,8 +80,8 @@ API desenvolvida do desafio 02 em Node.js com o Fastify e Typescript, afim de se
 
 ### Négocios
 
-- [ ] Deve ser possível identificar o usuário entre as requisições
-- [ ] O usuário só pode visualizar, editar e apagar as refeições as quais ele criou
+- [x] Deve ser possível identificar o usuário entre as requisições
+- [x] O usuário só pode visualizar, editar e apagar as refeições as quais ele criou
 
 ## Como executar
 
@@ -93,12 +92,19 @@ Se estiver utilizando outro gerenciador de pacotes, basta trocar o `pnpm` por `n
 Instalar as dependências do projeto.
 
 ```bash
-pnpm ìnstall
+pnpm install
 ```
 
 ### Testes
 
-> TODO
+Criar arquivo `.env.test` na raiz do projeto.
+
+```text
+DATABASE_CLIENT=sqlite
+DATABASE_URL="./db/test.db"
+```
+
+Executar os testes.
 
 ```bash
 pnpm test
@@ -106,7 +112,25 @@ pnpm test
 
 ### Localmente
 
-> TODO
+Criar arquivo `.env` na raiz do projeto.
+
+```text
+NODE_ENV=development
+DATABASE_CLIENT=sqlite
+DATABASE_URL="./db/app.db"
+```
+
+Executar as `migrations`.
+
+```bash
+pnpm knex migrate:latest
+```
+
+Executar a aplicação.
+
+```bash
+pnpm dev
+```
 
 ## Tecnologias
 
@@ -122,10 +146,6 @@ pnpm test
 > **DICA !**
 >
 > Todas as demais dependências utilizadas podem ser visualizados acessando o [package.json](./package.json).
-
-## Prévia
-
-> TODO
 
 ## Autor
 
