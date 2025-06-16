@@ -11,7 +11,7 @@
     <img src="https://img.shields.io/github/last-commit/felipe-dr/daily-diet-api-fastify?style=for-the-badge&color=4e5acf" alt="Last commit on GitHub" />
   </a>
   <!-- <img src="https://img.shields.io/badge/license-MIT-4e5acf?style=for-the-badge" alt="License" /> -->
-  <img src="https://img.shields.io/badge/status-in_progress-blue?style=for-the-badge" alt="Status" />
+  <img src="https://img.shields.io/badge/status-concluído-green?style=for-the-badge" alt="Status" />
 </p>
 
 <br>
