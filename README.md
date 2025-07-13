@@ -1,5 +1,5 @@
 <p align="center">
-  <h1 align="center">Desafio 02 Criando API Rest com Node.js</h1>
+  <h1 align="center">Daily Diet - Desafio 02 - Criando API Rest com Node.js</h1>
   <p align="center">Projeto desenvolvido durante a formação <strong>Node.js</strong>.</p>
 </p>
 
@@ -53,7 +53,7 @@
 
 ## Sobre
 
-API desenvolvida do desafio 02 em Node.js com o Fastify e Typescript, afim de se gerenciar a dieta diária.
+API desenvolvida no desafio 02 em Node.js com o Fastify e Typescript, afim de gerenciar a dieta diária recuperando as métricas de um usuário.
 
 ## Requisitos e funcionalidades
 
