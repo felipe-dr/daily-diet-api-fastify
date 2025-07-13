@@ -1,5 +1,5 @@
 <p align="center">
-  <h1 align="center">Daily Diet - Desafio 02 - Criando API Rest com Node.js</h1>
+  <h1 align="center">Daily Diet - Criando API Rest com Node.js - Desafio 02</h1>
   <p align="center">Projeto desenvolvido durante a formação <strong>Node.js</strong>.</p>
 </p>
 
